@@ -32,15 +32,16 @@ export default function Home() {
               </div>
             </div>
             <div className="md:w-1/2 flex justify-center">
-              <div className="relative w-full max-w-md h-64 md:h-80">
+                <div className="relative w-full max-w-md h-auto">
                 <Image 
-                  src="/images/ecu-hero.jpg" 
+                  src="/images/ecu-hero.png" 
                   alt="ECU Programming" 
-                  fill 
-                  className="object-cover rounded-lg shadow-xl"
+                  width={400} 
+                  height={400} 
+                  className="object-contain rounded-lg shadow-xl"
                   priority
                 />
-              </div>
+                </div>
             </div>
           </div>
         </div>
