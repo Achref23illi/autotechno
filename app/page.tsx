@@ -1,103 +1,152 @@
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
+import { SearchBar } from './components/ui/SearchBar';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="flex min-h-screen flex-col">
+      {/* Hero Section */}
+      <section className="w-full bg-gradient-to-r from-gray-900 to-black py-12 md:py-24">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center">
+            <div className="md:w-1/2 mb-8 md:mb-0">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                Professional ECU Files & Automotive Solutions
+              </h1>
+              <p className="text-lg text-gray-300 mb-6">
+                Quality ECU files, dashboard solutions, and software tools for automotive professionals.
+              </p>
+              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                <Link 
+                  href="/ecu" 
+                  className="bg-blue-600 text-white font-medium py-3 px-6 rounded-md hover:bg-blue-700 transition duration-300"
+                >
+                  Browse ECU Files
+                </Link>
+                <Link 
+                  href="/software" 
+                  className="bg-gray-700 text-white font-medium py-3 px-6 rounded-md hover:bg-gray-600 transition duration-300"
+                >
+                  Explore Software
+                </Link>
+              </div>
+            </div>
+            <div className="md:w-1/2 flex justify-center">
+              <div className="relative w-full max-w-md h-64 md:h-80">
+                <Image 
+                  src="/images/ecu-hero.jpg" 
+                  alt="ECU Programming" 
+                  fill 
+                  className="object-cover rounded-lg shadow-xl"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* Search Section */}
+      <section className="w-full bg-gray-800 py-8">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center">
+            <h2 className="text-2xl font-semibold text-white mb-6">Find the perfect solution for your vehicle</h2>
+            <div className="w-full max-w-2xl">
+              <SearchBar placeholder="Search for ECU files, vehicle models, or brands..." />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="w-full bg-gray-900 py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* ECU Files */}
+            <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
+              <div className="mb-4 text-blue-500 flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2 text-center">ECU Files</h3>
+              <p className="text-gray-300 text-center">
+                Original and modified ECU files for all major vehicle brands. 
+                Custom tuning available for optimal performance.
+              </p>
+              <div className="mt-4 flex justify-center">
+                <Link href="/ecu" className="text-blue-400 hover:text-blue-300">
+                  View Files →
+                </Link>
+              </div>
+            </div>
+            
+            {/* Airbag Reset */}
+            <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
+              <div className="mb-4 text-blue-500 flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2 text-center">Airbag Solutions</h3>
+              <p className="text-gray-300 text-center">
+                Airbag reset services and solutions for dashboards. 
+                Quick and professional resolution for crash data issues.
+              </p>
+              <div className="mt-4 flex justify-center">
+                <Link href="/airbag" className="text-blue-400 hover:text-blue-300">
+                  Explore Options →
+                </Link>
+              </div>
+            </div>
+            
+            {/* Software */}
+            <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
+              <div className="mb-4 text-blue-500 flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2 text-center">Software Tools</h3>
+              <p className="text-gray-300 text-center">
+                Professional diagnostic software and programming tools.
+                Everything you need for automotive modification work.
+              </p>
+              <div className="mt-4 flex justify-center">
+                <Link href="/software" className="text-blue-400 hover:text-blue-300">
+                  Get Software →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Updates Section */}
+      <section className="w-full bg-black py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">Latest Updates</h2>
+          <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center">
+                <span className="bg-blue-600 text-white text-xs font-medium px-2 py-1 rounded">NEW</span>
+                <span className="text-gray-400 text-sm ml-3">April 22, 2025</span>
+              </div>
+              <span className="text-gray-400 text-sm">3 comments</span>
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-2">Last Files Added to Database</h3>
+            <p className="text-gray-300 mb-4">
+              New ECU files have been added to our growing database, including the latest updates for BMW, Audi, and Mercedes vehicles.
+            </p>
+            <div className="flex items-center text-sm">
+              <span className="text-blue-400 hover:text-blue-300 cursor-pointer">ADMIN</span>
+              <span className="mx-2 text-gray-500">•</span>
+              <span className="text-blue-400 hover:text-blue-300 cursor-pointer">EDC17C64 system bosch</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
