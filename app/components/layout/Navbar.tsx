@@ -4,11 +4,14 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import { useAuth } from '../../context/AuthContext';
+import Button from '../ui/Button';
 
 const Navbar = () => {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { user, logout } = useAuth();
 
   // Navigation items
   const navItems = [
@@ -41,6 +44,15 @@ const Navbar = () => {
     };
   }, []);
 
+  // Handle logout
+  const handleLogout = async () => {
+    try {
+      await logout();
+    } catch (error) {
+      console.error('Logout failed:', error);
+    }
+  };
+
   return (
     <nav className={`sticky top-0 z-50 bg-black border-b border-gray-800 ${
       isScrolled ? 'shadow-md' : ''
@@ -56,24 +68,63 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`px-4 py-5 mx-1 text-sm font-medium transition-colors duration-200 ${
-                  isActive(item.href)
-                    ? 'bg-gray-800 text-white'
-                    : 'text-gray-300 hover:bg-gray-700 hover:text-white'
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+          <div className="hidden md:flex items-center">
+            <div className="flex">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`px-4 py-5 mx-1 text-sm font-medium transition-colors duration-200 ${
+                    isActive(item.href)
+                      ? 'bg-gray-800 text-white'
+                      : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+            
+            {/* Auth Buttons - Desktop */}
+            <div className="ml-4 flex items-center">
+              {user ? (
+                <div className="flex items-center space-x-4">
+                  <Link 
+                    href="/dashboard" 
+                    className="text-gray-300 hover:text-white text-sm font-medium"
+                  >
+                    Dashboard
+                  </Link>
+                  <div className="h-4 border-l border-gray-600"></div>
+                  <button 
+                    onClick={handleLogout}
+                    className="text-gray-300 hover:text-white text-sm font-medium"
+                  >
+                    Logout
+                  </button>
+                </div>
+              ) : (
+                <Button 
+                  href="/auth/login" 
+                  variant="primary" 
+                  size="sm"
+                >
+                  Login / Sign Up
+                </Button>
+              )}
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
+            {user && (
+              <Link 
+                href="/dashboard" 
+                className="mr-4 text-gray-300 hover:text-white text-sm font-medium"
+              >
+                Dashboard
+              </Link>
+            )}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-gray-300 hover:text-white focus:outline-none"
@@ -123,6 +174,27 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
+            
+            {/* Auth Button - Mobile */}
+            {!user ? (
+              <Link
+                href="/auth/login"
+                className="block px-4 py-3 mt-2 text-sm font-medium bg-blue-600 text-white hover:bg-blue-700"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Login / Sign Up
+              </Link>
+            ) : (
+              <button
+                onClick={() => {
+                  handleLogout();
+                  setIsMobileMenuOpen(false);
+                }}
+                className="block w-full text-left px-4 py-3 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              >
+                Logout
+              </button>
+            )}
           </div>
         )}
       </div>

@@ -2,8 +2,33 @@
 import { SearchBar } from '../components/ui/SearchBar';
 import Button from '../components/ui/Button';
 import Image from 'next/image';
+import AccordionFAQ from '../components/ui/AccordionFAQ';
 
 export default function AirbagPage() {
+  // FAQ data
+  const faqItems = [
+    {
+      question: "How does airbag module reset work?",
+      answer: "Our airbag reset solutions provide the software needed to clear crash data from the airbag control module. This process removes fault codes and resets the module to its original state, allowing for proper operation without the need for expensive module replacement."
+    },
+    {
+      question: "Will this fix my airbag light on the dashboard?",
+      answer: "In most cases, yes. If the airbag warning light is on due to crash data or fault codes stored in the module, our reset solutions will clear these codes and turn off the warning light. However, if there is a physical fault with the airbag system components, additional repairs may be needed."
+    },
+    {
+      question: "What vehicles are supported?",
+      answer: "We offer solutions for all major vehicle brands including BMW, Mercedes, Audi, Volkswagen, Toyota, Honda, Ford, and many more. You can use the search function to find solutions specific to your vehicle make and model."
+    },
+    {
+      question: "Do I need special hardware to use these solutions?",
+      answer: "Most of our airbag solutions require a standard OBD2 diagnostic interface compatible with your vehicle. Some advanced solutions may require specific interfaces or adapters, which will be clearly specified in the product description."
+    },
+    {
+      question: "How long does the reset process take?",
+      answer: "The airbag reset process typically takes between 10-30 minutes, depending on the vehicle make and model. Our solutions are designed to be efficient and straightforward, with step-by-step instructions to guide you through the entire process."
+    }
+  ];
+
   return (
     <main className="min-h-screen bg-gray-100">
       {/* Header Section */}
@@ -36,32 +61,32 @@ export default function AirbagPage() {
                 functionality to your vehicle&apos;s safety systems. We provide professional-grade 
                 solutions for all major vehicle manufacturers.
               </p>
-              <ul className="space-y-2 mb-6">
+                <ul className="space-y-2 mb-6">
                 <li className="flex items-center">
                   <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Clear crash data and fault codes</span>
+                  <span className="text-black">Clear crash data and fault codes</span>
                 </li>
                 <li className="flex items-center">
                   <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Reset airbag modules after deployment</span>
+                  <span className="text-black">Reset airbag modules after deployment</span>
                 </li>
                 <li className="flex items-center">
                   <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Restore dashboard functionality</span>
+                  <span className="text-black">Restore dashboard functionality</span>
                 </li>
                 <li className="flex items-center">
                   <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Compatible with all major vehicle brands</span>
+                  <span className="text-black">Compatible with all major vehicle brands</span>
                 </li>
-              </ul>
+                </ul>
               <Button
                 variant="primary"
                 size="lg"
@@ -73,7 +98,7 @@ export default function AirbagPage() {
             <div className="md:w-1/2 relative h-64 md:h-auto">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 opacity-80 z-10"></div>
               <Image
-                src="/images/airbag-hero.jpg"
+                src="/images/airbag-hero.png"
                 alt="Airbag module reset service"
                 fill
                 className="object-cover"
@@ -100,7 +125,7 @@ export default function AirbagPage() {
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="relative h-48">
               <Image
-                src="/images/airbag-reset.jpg"
+                src="/images/airbag-reset.png"
                 alt="Airbag Module Reset"
                 fill
                 className="object-cover"
@@ -121,7 +146,7 @@ export default function AirbagPage() {
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="relative h-48">
               <Image
-                src="/images/srs-repair.jpg"
+                src="/images/srs-repair.png"
                 alt="SRS System Repair"
                 fill
                 className="object-cover"
@@ -142,7 +167,7 @@ export default function AirbagPage() {
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="relative h-48">
               <Image
-                src="/images/crash-data.jpg"
+                src="/images/crash-data.png"
                 alt="Crash Data Clearing"
                 fill
                 className="object-cover"
@@ -167,42 +192,7 @@ export default function AirbagPage() {
           Frequently Asked Questions
         </h2>
         
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <div className="mb-4">
-            <h3 className="text-lg font-semibold mb-2">How does airbag module reset work?</h3>
-            <p className="text-gray-600">
-              Our airbag reset solutions provide the software needed to clear crash data from the airbag control module. 
-              This process removes fault codes and resets the module to its original state, allowing for proper operation
-              without the need for expensive module replacement.
-            </p>
-          </div>
-          
-          <div className="mb-4">
-            <h3 className="text-lg font-semibold mb-2">Will this fix my airbag light on the dashboard?</h3>
-            <p className="text-gray-600">
-              In most cases, yes. If the airbag warning light is on due to crash data or fault codes stored in the module,
-              our reset solutions will clear these codes and turn off the warning light. However, if there is a physical
-              fault with the airbag system components, additional repairs may be needed.
-            </p>
-          </div>
-          
-          <div className="mb-4">
-            <h3 className="text-lg font-semibold mb-2">What vehicles are supported?</h3>
-            <p className="text-gray-600">
-              We offer solutions for all major vehicle brands including BMW, Mercedes, Audi, Volkswagen, Toyota, Honda,
-              Ford, and many more. You can use the search function to find solutions specific to your vehicle make and model.
-            </p>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-2">Do I need special hardware to use these solutions?</h3>
-            <p className="text-gray-600">
-              Most of our airbag solutions require a standard OBD2 diagnostic interface compatible with your vehicle.
-              Some advanced solutions may require specific interfaces or adapters, which will be clearly specified
-              in the product description.
-            </p>
-          </div>
-        </div>
+        <AccordionFAQ items={faqItems} />
       </section>
     </main>
   );

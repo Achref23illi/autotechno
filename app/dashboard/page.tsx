@@ -22,15 +22,52 @@ export default function DashboardPage() {
           <div className="mb-4 md:mb-0 md:w-1/3">
             <SearchBar placeholder="Search dashboard solutions..." />
           </div>
-          <div className="flex items-center space-x-4">
-            <span className="text-gray-600">Filter by:</span>
-            <select className="px-3 py-2 border border-gray-300 rounded-md bg-white">
-              <option>All Models</option>
-              <option>BMW</option>
-              <option>Mercedes</option>
-              <option>Audi</option>
-              <option>Volkswagen</option>
-            </select>
+          <div className="flex flex-col sm:flex-row items-center gap-3">
+            <div className="flex items-center gap-2">
+              <span className="text-gray-700 font-medium whitespace-nowrap">Filter by:</span>
+              <div className="relative inline-block">
+                <select className="pl-4 pr-10 py-2.5 border border-gray-300 rounded-md bg-white appearance-none shadow-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 cursor-pointer">
+                  <option value="">All Brands</option>
+                  <option value="bmw">BMW</option>
+                  <option value="mercedes">Mercedes-Benz</option>
+                  <option value="audi">Audi</option>
+                  <option value="volkswagen">Volkswagen</option>
+                  <option value="volvo">Volvo</option>
+                  <option value="toyota">Toyota</option>
+                  <option value="lexus">Lexus</option>
+                </select>
+                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <svg className="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M7 7l3-3 3 3m0 6l-3 3-3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-2">
+              <span className="text-gray-700 font-medium">Type:</span>
+              <div className="relative inline-block">
+                <select className="pl-4 pr-10 py-2.5 border border-gray-300 rounded-md bg-white appearance-none shadow-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 cursor-pointer">
+                  <option value="">All Types</option>
+                  <option value="lcd">LCD Repair</option>
+                  <option value="speedo">Speedometer</option>
+                  <option value="mileage">Mileage</option>
+                  <option value="custom">Custom</option>
+                </select>
+                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <svg className="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M7 7l3-3 3 3m0 6l-3 3-3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            
+            <button className="bg-blue-600 hover:bg-blue-700 text-white py-2.5 px-4 rounded-md transition-colors duration-200 flex items-center gap-2 shadow-sm">
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+              </svg>
+              Apply Filter
+            </button>
           </div>
         </div>
       </section>
@@ -48,32 +85,32 @@ export default function DashboardPage() {
                 From fixing faulty digital speedometers to installing custom gauges and displays, our
                 files provide professional-grade solutions for technicians and automotive workshops.
               </p>
-              <ul className="space-y-2 mb-6">
+                <ul className="space-y-2 mb-6">
                 <li className="flex items-center">
                   <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Fix digital speedometer issues</span>
+                  <span className="text-black">Fix digital speedometer issues</span>
                 </li>
                 <li className="flex items-center">
                   <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Repair LCD display malfunctions</span>
+                  <span className="text-black">Repair LCD display malfunctions</span>
                 </li>
                 <li className="flex items-center">
                   <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Custom gauge and display solutions</span>
+                  <span className="text-black">Custom gauge and display solutions</span>
                 </li>
                 <li className="flex items-center">
                   <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Mileage correction and calibration</span>
+                  <span className="text-black">Mileage correction and calibration</span>
                 </li>
-              </ul>
+                </ul>
               <Button
                 variant="primary"
                 size="lg"
@@ -85,7 +122,7 @@ export default function DashboardPage() {
             <div className="md:w-1/2 relative h-64 md:h-auto">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 opacity-80 z-10"></div>
               <Image
-                src="/images/dashboard-hero.jpg"
+                src="/images/dashboard-hero.png"
                 alt="Digital dashboard solutions"
                 fill
                 className="object-cover"
@@ -112,14 +149,14 @@ export default function DashboardPage() {
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="relative h-48">
               <Image
-                src="/images/speedometer-repair.jpg"
+                src="/images/speedometer-repair.png"
                 alt="Digital Speedometer Repair"
                 fill
                 className="object-cover"
               />
             </div>
             <div className="p-4">
-              <h3 className="text-lg font-semibold mb-2">Digital Speedometer Repair</h3>
+              <h3 className="text-lg font-semibold mb-2 text-black">Digital Speedometer Repair</h3>
               <p className="text-gray-600 mb-4">
                 Solutions to fix faulty digital speedometers and instrument clusters.
               </p>
@@ -136,14 +173,14 @@ export default function DashboardPage() {
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="relative h-48">
               <Image
-                src="/images/lcd-display.jpg"
+                src="/images/lcd-display.png"
                 alt="LCD Display Repair"
                 fill
                 className="object-cover"
               />
             </div>
             <div className="p-4">
-              <h3 className="text-lg font-semibold mb-2">LCD Display Repair</h3>
+              <h3 className="text-lg font-semibold mb-2 text-black">LCD Display Repair</h3>
               <p className="text-gray-600 mb-4">
                 Fix missing pixels, dim displays, and other LCD panel issues in dashboards.
               </p>
@@ -160,14 +197,14 @@ export default function DashboardPage() {
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="relative h-48">
               <Image
-                src="/images/custom-gauges.jpg"
+                src="/images/custom-gauges.png"
                 alt="Custom Gauge Solutions"
                 fill
                 className="object-cover"
               />
             </div>
             <div className="p-4">
-              <h3 className="text-lg font-semibold mb-2">Custom Gauge Solutions</h3>
+              <h3 className="text-lg font-semibold mb-2 text-black">Custom Gauge Solutions</h3>
               <p className="text-gray-600 mb-4">
                 Specialized files for installing and calibrating custom gauges and displays.
               </p>
@@ -183,77 +220,308 @@ export default function DashboardPage() {
       </section>
 
       {/* Compatible Vehicles Section */}
-      <section className="container mx-auto px-4 py-8 mb-8">
-        <h2 className="text-2xl font-semibold mb-6 text-gray-800">
-          Compatible Vehicles
+      <section className="container mx-auto px-4 py-12 mb-8">
+        <h2 className="text-2xl font-semibold mb-6 text-gray-800 text-center">
+          <span className="inline-block border-b-2 border-blue-500 pb-2">Compatible Vehicle Brands</span>
         </h2>
         
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <p className="text-gray-600 mb-6">
-            Our dashboard solutions are compatible with a wide range of vehicles. Below are the most common
-            makes and models we support. If your vehicle is not listed, please contact us for availability.
+        <div className="bg-white rounded-lg shadow-lg p-8">
+          <p className="text-gray-600 mb-8 text-center max-w-3xl mx-auto">
+            Our dashboard solutions are engineered to be compatible with a wide range of vehicles from premium 
+            to mainstream manufacturers. Select your vehicle brand below to see supported models and solutions.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div className="border border-gray-200 rounded-md p-3">
-              <h3 className="font-semibold mb-2">BMW</h3>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>3 Series (E90, E92, F30, G20)</li>
-                <li>5 Series (E60, F10, G30)</li>
-                <li>7 Series (E65, F01, G11)</li>
-                <li>X5, X6, X3, X1</li>
-              </ul>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* BMW */}
+            <div className="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+              <div className="p-4 bg-gray-50 border-b flex items-center">
+                <div className="w-14 h-14 relative mr-4 flex-shrink-0">
+                  <Image 
+                    src="/images/brands/bmw.webp" 
+                    alt="BMW Logo" 
+                    fill
+                    className="object-contain" 
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800">BMW</h3>
+              </div>
+              <div className="p-5">
+                <ul className="text-gray-700 space-y-2 divide-y divide-gray-100">
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>3 Series <span className="text-gray-500 text-sm">(E90, E92, F30, G20)</span></span>
+                  </li>
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>5 Series <span className="text-gray-500 text-sm">(E60, F10, G30)</span></span>
+                  </li>
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>7 Series <span className="text-gray-500 text-sm">(E65, F01, G11)</span></span>
+                  </li>
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>X Series <span className="text-gray-500 text-sm">(X1, X3, X5, X6)</span></span>
+                  </li>
+                </ul>
+                <div className="mt-4 pt-3 border-t border-gray-100">
+                  <Button variant="outline" size="sm" href="/dashboard/bmw">
+                    View BMW Solutions
+                  </Button>
+                </div>
+              </div>
             </div>
             
-            <div className="border border-gray-200 rounded-md p-3">
-              <h3 className="font-semibold mb-2">Mercedes</h3>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>C-Class (W203, W204, W205)</li>
-                <li>E-Class (W211, W212, W213)</li>
-                <li>S-Class (W221, W222)</li>
-                <li>ML, GL, GLE, GLC</li>
-              </ul>
+            {/* Mercedes */}
+            <div className="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+              <div className="p-4 bg-gray-50 border-b flex items-center">
+                <div className="w-14 h-14 relative mr-4 flex-shrink-0">
+                  <div className="rounded-full overflow-hidden w-full h-full flex items-center justify-center bg-gray-900">
+                    <Image 
+                      src="/images/brands/mercedes.webp" 
+                      alt="Mercedes Logo" 
+                      fill
+                      className="object-contain p-1" 
+                    />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800">Mercedes-Benz</h3>
+              </div>
+              <div className="p-5">
+                <ul className="text-gray-700 space-y-2 divide-y divide-gray-100">
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>C-Class <span className="text-gray-500 text-sm">(W203, W204, W205)</span></span>
+                  </li>
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>E-Class <span className="text-gray-500 text-sm">(W211, W212, W213)</span></span>
+                  </li>
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>S-Class <span className="text-gray-500 text-sm">(W221, W222)</span></span>
+                  </li>
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>SUV Models <span className="text-gray-500 text-sm">(ML, GL, GLE, GLC)</span></span>
+                  </li>
+                </ul>
+                <div className="mt-4 pt-3 border-t border-gray-100">
+                  <Button variant="outline" size="sm" href="/dashboard/mercedes">
+                    View Mercedes Solutions
+                  </Button>
+                </div>
+              </div>
             </div>
             
-            <div className="border border-gray-200 rounded-md p-3">
-              <h3 className="font-semibold mb-2">Audi</h3>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>A3, A4, A5, A6</li>
-                <li>Q3, Q5, Q7</li>
-                <li>TT</li>
-                <li>R8</li>
-              </ul>
+            {/* Audi */}
+            <div className="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+              <div className="p-4 bg-gray-50 border-b flex items-center">
+                <div className="w-14 h-14 relative mr-4 flex-shrink-0">
+                  <Image 
+                    src="/images/brands/audi.webp" 
+                    alt="Audi Logo" 
+                    fill
+                    className="object-contain" 
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800">Audi</h3>
+              </div>
+              <div className="p-5">
+                <ul className="text-gray-700 space-y-2 divide-y divide-gray-100">
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>A Series <span className="text-gray-500 text-sm">(A3, A4, A5, A6)</span></span>
+                  </li>
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Q Series <span className="text-gray-500 text-sm">(Q3, Q5, Q7)</span></span>
+                  </li>
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>TT Models</span>
+                  </li>
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>R8</span>
+                  </li>
+                </ul>
+                <div className="mt-4 pt-3 border-t border-gray-100">
+                  <Button variant="outline" size="sm" href="/dashboard/audi">
+                    View Audi Solutions
+                  </Button>
+                </div>
+              </div>
             </div>
             
-            <div className="border border-gray-200 rounded-md p-3">
-              <h3 className="font-semibold mb-2">Volkswagen</h3>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>Golf, Polo</li>
-                <li>Passat, CC</li>
-                <li>Tiguan, Touareg</li>
-                <li>Jetta, Arteon</li>
-              </ul>
+            {/* Volkswagen */}
+            <div className="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+              <div className="p-4 bg-gray-50 border-b flex items-center">
+                <div className="w-14 h-14 relative mr-4 flex-shrink-0">
+                  <div className="rounded-full overflow-hidden w-full h-full flex items-center justify-center bg-blue-900">
+                    <Image 
+                      src="/images/brands/volkswagen.webp" 
+                      alt="Volkswagen Logo" 
+                      fill
+                      className="object-contain p-1" 
+                    />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800">Volkswagen</h3>
+              </div>
+              <div className="p-5">
+                <ul className="text-gray-700 space-y-2 divide-y divide-gray-100">
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Golf, Polo</span>
+                  </li>
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Passat, CC</span>
+                  </li>
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Tiguan, Touareg</span>
+                  </li>
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Jetta, Arteon</span>
+                  </li>
+                </ul>
+                <div className="mt-4 pt-3 border-t border-gray-100">
+                  <Button variant="outline" size="sm" href="/dashboard/volkswagen">
+                    View VW Solutions
+                  </Button>
+                </div>
+              </div>
             </div>
             
-            <div className="border border-gray-200 rounded-md p-3">
-              <h3 className="font-semibold mb-2">Volvo</h3>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>S60, S90</li>
-                <li>V60, V90</li>
-                <li>XC60, XC90</li>
-                <li>C30, C70</li>
-              </ul>
+            {/* Volvo */}
+            <div className="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+              <div className="p-4 bg-gray-50 border-b flex items-center">
+                <div className="w-14 h-14 relative mr-4 flex-shrink-0">
+                  <Image 
+                    src="/images/brands/volvo.webp" 
+                    alt="Volvo Logo" 
+                    fill
+                    className="object-contain" 
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800">Volvo</h3>
+              </div>
+              <div className="p-5">
+                <ul className="text-gray-700 space-y-2 divide-y divide-gray-100">
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>S60, S90</span>
+                  </li>
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>V60, V90</span>
+                  </li>
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>XC60, XC90</span>
+                  </li>
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>C30, C70</span>
+                  </li>
+                </ul>
+                <div className="mt-4 pt-3 border-t border-gray-100">
+                  <Button variant="outline" size="sm" href="/dashboard/volvo">
+                    View Volvo Solutions
+                  </Button>
+                </div>
+              </div>
             </div>
             
-            <div className="border border-gray-200 rounded-md p-3">
-              <h3 className="font-semibold mb-2">Other Makes</h3>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>Toyota, Lexus</li>
-                <li>Honda, Acura</li>
-                <li>Ford, Jaguar, Land Rover</li>
-                <li>Porsche, Alfa Romeo</li>
-              </ul>
+            {/* Other Makes */}
+            <div className="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+              <div className="p-4 bg-gray-50 border-b">
+                <h3 className="text-xl font-bold text-gray-800">Additional Brands</h3>
+              </div>
+              <div className="p-5">
+                <ul className="text-gray-700 space-y-2 divide-y divide-gray-100">
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Toyota, Lexus</span>
+                  </li>
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Honda, Acura</span>
+                  </li>
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Ford, Jaguar, Land Rover</span>
+                  </li>
+                  <li className="py-2 flex items-start">
+                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Porsche, Alfa Romeo</span>
+                  </li>
+                </ul>
+                <div className="mt-4 pt-3 border-t border-gray-100">
+                  <Button variant="outline" size="sm" href="/dashboard/other-brands">
+                    View All Brands
+                  </Button>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div className="mt-10 text-center">
+            <p className="mb-4 text-gray-600">Can&apos;t find your vehicle? Contact our support team for custom solutions</p>
+            <Button variant="primary" href="/contact">
+              Contact Support
+            </Button>
           </div>
         </div>
       </section>
