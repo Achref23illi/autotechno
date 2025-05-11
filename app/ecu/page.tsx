@@ -45,10 +45,10 @@ export default function ECUPage() {
       <section className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-semibold text-gray-800">Latest ECU Files</h2>
-          <button className="text-blue-600 hover:text-blue-800">View All</button>
+          <button className="text-yellow-600 hover:text-yellow-800">View All</button>
         </div>
-        
-        <div className="bg-white rounded-md shadow-md p-4 mb-4 border-l-4 border-blue-600">
+
+        <div className="bg-white rounded-md shadow-md p-4 mb-4 border-l-4 border-yellow-600">
           <div className="flex justify-between mb-2">
             <div>
               <span className="font-semibold">BMW M4 3.0T G82 - Stage 1</span>
@@ -62,15 +62,15 @@ export default function ECUPage() {
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-2">
               <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Original</span>
-              <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Stage 1</span>
+              <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Stage 1</span>
             </div>
-            <button className="bg-blue-600 text-white px-4 py-1 rounded-md text-sm hover:bg-blue-700">
+            <button className="bg-yellow-600 text-white px-4 py-1 rounded-md text-sm hover:bg-yellow-700">
               Download
             </button>
           </div>
         </div>
         
-        <div className="bg-white rounded-md shadow-md p-4 mb-4 border-l-4 border-blue-600">
+        <div className="bg-white rounded-md shadow-md p-4 mb-4 border-l-4 border-yellow-600">
           <div className="flex justify-between mb-2">
             <div>
               <span className="font-semibold">Audi RS6 4.0 TFSI - Stage 2</span>
@@ -84,15 +84,15 @@ export default function ECUPage() {
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-2">
               <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Original</span>
-              <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Stage 2</span>
+              <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Stage 2</span>
             </div>
-            <button className="bg-blue-600 text-white px-4 py-1 rounded-md text-sm hover:bg-blue-700">
+            <button className="bg-yellow-600 text-white px-4 py-1 rounded-md text-sm hover:bg-yellow-700">
               Download
             </button>
           </div>
         </div>
         
-        <div className="bg-white rounded-md shadow-md p-4 border-l-4 border-blue-600">
+        <div className="bg-white rounded-md shadow-md p-4 border-l-4 border-yellow-600">
           <div className="flex justify-between mb-2">
             <div>
               <span className="font-semibold">Mercedes C63 AMG - ECO Tune</span>
@@ -108,7 +108,7 @@ export default function ECUPage() {
               <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Original</span>
               <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">ECO</span>
             </div>
-            <button className="bg-blue-600 text-white px-4 py-1 rounded-md text-sm hover:bg-blue-700">
+            <button className="bg-yellow-600 text-white px-4 py-1 rounded-md text-sm hover:bg-yellow-700">
               Download
             </button>
           </div>

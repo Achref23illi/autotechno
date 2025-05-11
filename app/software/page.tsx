@@ -70,7 +70,7 @@ export default function SoftwarePage() {
             <div className="flex items-center gap-2">
               <span className="text-gray-700 font-medium whitespace-nowrap">Filter by:</span>
               <div className="relative inline-block">
-                <select className="pl-4 pr-10 py-2.5 border border-gray-300 rounded-md bg-white appearance-none shadow-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 cursor-pointer">
+                <select className="pl-4 pr-10 py-2.5 border border-gray-300 rounded-md bg-white appearance-none shadow-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 cursor-pointer">
                   <option value="">All Categories</option>
                   <option value="diagnostic">Diagnostic</option>
                   <option value="tuning">Tuning</option>
@@ -89,7 +89,7 @@ export default function SoftwarePage() {
             <div className="flex items-center gap-2">
               <span className="text-gray-700 font-medium">Compatibility:</span>
               <div className="relative inline-block">
-                <select className="pl-4 pr-10 py-2.5 border border-gray-300 rounded-md bg-white appearance-none shadow-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 cursor-pointer">
+                <select className="pl-4 pr-10 py-2.5 border border-gray-300 rounded-md bg-white appearance-none shadow-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 cursor-pointer">
                   <option value="">All OS</option>
                   <option value="windows">Windows</option>
                   <option value="mac">MacOS</option>
@@ -103,7 +103,7 @@ export default function SoftwarePage() {
               </div>
             </div>
             
-            <button className="bg-blue-600 hover:bg-blue-700 text-white py-2.5 px-4 rounded-md transition-colors duration-200 flex items-center gap-2 shadow-sm">
+            <button className="bg-yellow-600 hover:bg-yellow-700 text-white py-2.5 px-4 rounded-md transition-colors duration-200 flex items-center gap-2 shadow-sm">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
               </svg>
@@ -128,25 +128,25 @@ export default function SoftwarePage() {
               </p>
               <ul className="space-y-2 mb-6 text-gray-300">
                 <li className="flex items-center">
-                  <svg className="h-5 w-5 text-blue-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-5 w-5 text-yellow-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>User-friendly interfaces with advanced features</span>
                 </li>
                 <li className="flex items-center">
-                  <svg className="h-5 w-5 text-blue-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-5 w-5 text-yellow-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Regular updates with new vehicle compatibility</span>
                 </li>
                 <li className="flex items-center">
-                  <svg className="h-5 w-5 text-blue-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-5 w-5 text-yellow-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Technical support from automotive experts</span>
                 </li>
                 <li className="flex items-center">
-                  <svg className="h-5 w-5 text-blue-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-5 w-5 text-yellow-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Compatible with standard OBD2 interfaces</span>
@@ -194,11 +194,11 @@ export default function SoftwarePage() {
                 <div className="flex justify-between items-start mb-2">
                 <div>
                   <h3 className="text-lg font-semibold text-black">{software.name}</h3>
-                  <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+                  <span className="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">
                   {software.category}
                   </span>
                 </div>
-                <span className="font-bold text-blue-600">€{software.price.toFixed(2)}</span>
+                <span className="font-bold text-yellow-600">€{software.price.toFixed(2)}</span>
                 </div>
                 
                 <p className="text-gray-600 text-sm mb-3 text-black">

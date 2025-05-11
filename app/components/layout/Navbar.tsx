@@ -20,6 +20,7 @@ const Navbar = () => {
     { name: 'AIRBAG', href: '/airbag' },
     { name: 'DASHBOARD', href: '/dashboard' },
     { name: 'SOFTWARE', href: '/software' },
+    { name: 'TOKENS', href: '/tokens' },
     { name: 'OTHER', href: '/other' },
   ];
 
@@ -63,7 +64,6 @@ const Navbar = () => {
           <div className="flex items-center py-4">
             <Link href="/" className="flex items-center">
               <span className="text-white text-3xl font-bold mr-2">AUTOTECHNO</span>
-              <span className="text-blue-400 text-xl">BRAHIM</span>
             </Link>
           </div>
 
@@ -179,7 +179,7 @@ const Navbar = () => {
             {!user ? (
               <Link
                 href="/auth/login"
-                className="block px-4 py-3 mt-2 text-sm font-medium bg-blue-600 text-white hover:bg-blue-700"
+                className="block px-4 py-3 mt-2 text-sm font-medium bg-yellow-600 text-white hover:bg-yellow-700"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Login / Sign Up

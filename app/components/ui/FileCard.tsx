@@ -31,12 +31,12 @@ const FileCard = ({
   className = '',
 }: FileCardProps) => {
   return (
-    <div className={`bg-white rounded-md shadow-md p-4 border-l-4 border-blue-600 ${className}`}>
+    <div className={`bg-white rounded-md shadow-md p-4 border-l-4 border-yellow-600 ${className}`}>
       {/* Header section with title and date */}
       <div className="flex justify-between items-start mb-2">
         <div>
           <Link href={`/ecu/file/${id}`}>
-            <span className="font-semibold text-gray-800 hover:text-blue-600 transition-colors">
+            <span className="font-semibold text-gray-800 hover:text-yellow-600 transition-colors">
               {title}
             </span>
           </Link>
@@ -72,7 +72,7 @@ const FileCard = ({
           {tags.map((tag, index) => (
             <span 
               key={index} 
-              className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded"
+              className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded"
             >
               {tag}
             </span>

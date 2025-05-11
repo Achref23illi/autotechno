@@ -96,7 +96,7 @@ export default function AirbagPage() {
               </Button>
             </div>
             <div className="md:w-1/2 relative h-64 md:h-auto">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 opacity-80 z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-yellow-700 opacity-80 z-10"></div>
               <Image
                 src="/images/airbag-hero.png"
                 alt="Airbag module reset service"

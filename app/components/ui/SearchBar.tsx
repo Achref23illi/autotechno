@@ -31,11 +31,11 @@ export const SearchBar = ({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={placeholder}
-          className="w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
         />
         <button
           type="submit"
-          className="px-6 py-2 bg-blue-600 text-white font-bold uppercase rounded-r-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="px-6 py-2 bg-yellow-600 text-white font-bold uppercase rounded-r-md hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-500"
         >
           GO
         </button>

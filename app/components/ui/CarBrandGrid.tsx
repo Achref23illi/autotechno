@@ -30,7 +30,7 @@ const CarBrandGrid = ({ brands }: CarBrandGridProps) => {
                 className="object-contain"
               />
             </div>
-            <span className="text-blue-600 font-medium text-center">{brand.name}</span>
+            <span className="text-yellow-600 font-medium text-center">{brand.name}</span>
           </div>
         </Link>
       ))}

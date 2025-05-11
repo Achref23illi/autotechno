@@ -254,3 +254,30 @@ export interface User {
       sales: number;
     }[];
   }
+
+  // Token system types
+  export interface TokenPackage {
+    id: string;
+    name: string;
+    tokens: number;
+    price: number;
+    discountPercentage?: number;
+    popular?: boolean;
+  }
+
+  export interface UserTokens {
+    userId: string;
+    balance: number;
+    transactions: TokenTransaction[];
+  }
+
+  export interface TokenTransaction {
+    id: string;
+    userId: string;
+    amount: number;
+    type: 'purchase' | 'usage';
+    description: string;
+    createdAt: string;
+    paymentMethod?: string;
+    paymentId?: string;
+  }

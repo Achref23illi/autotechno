@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="mb-4">
               <Link href="/" className="flex items-center">
                 <span className="text-white text-2xl font-bold mr-1">AUTOTECHNO</span>
-                <span className="text-blue-400 text-sm">BRAHIM</span>
+                <span className="text-yellow-400 text-sm">BRAHIM</span>
               </Link>
             </div>
             <p className="text-sm text-gray-400 mb-4">
@@ -57,6 +57,9 @@ const Footer = () => {
               </li>
               <li>
                 <Link href="/software" className="text-gray-400 hover:text-white text-sm">Software</Link>
+              </li>
+              <li>
+                <Link href="/tokens" className="text-gray-400 hover:text-white text-sm">Tokens</Link>
               </li>
             </ul>
           </div>
@@ -104,7 +107,7 @@ const Footer = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span className="text-gray-400 text-sm">Tunis, Tunisia</span>
+                <span className="text-gray-400 text-sm">Alger, Algeria</span>
               </li>
             </ul>
           </div>

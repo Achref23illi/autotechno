@@ -58,7 +58,7 @@ const BrandSelector = ({
           placeholder="Search brands..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white text-sm focus:outline-none focus:ring-2 focus:ring-yellow-500"
         />
       </div>
       
@@ -72,8 +72,8 @@ const BrandSelector = ({
                 <button
                   onClick={() => handleSelectBrand(brand.id)}
                   className={`flex items-center w-full px-2 py-2 rounded-md ${
-                    selectedBrandId === brand.id 
-                      ? 'bg-blue-600 text-white' 
+                    selectedBrandId === brand.id
+                      ? 'bg-yellow-600 text-white'
                       : 'text-gray-300 hover:bg-gray-700'
                   }`}
                 >
@@ -92,8 +92,8 @@ const BrandSelector = ({
                 <Link 
                   href={`/ecu/${brand.id}`}
                   className={`flex items-center w-full px-2 py-2 rounded-md ${
-                    selectedBrandId === brand.id 
-                      ? 'bg-blue-600 text-white' 
+                    selectedBrandId === brand.id
+                      ? 'bg-yellow-600 text-white'
                       : 'text-gray-300 hover:bg-gray-700'
                   }`}
                 >

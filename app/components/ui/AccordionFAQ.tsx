@@ -48,7 +48,7 @@ const AccordionFAQ = ({ items }: AccordionFAQProps) => {
       {items.map((item, index) => (
         <div key={index} className="py-2">
           <button 
-            className="flex justify-between items-center w-full py-4 text-left focus:outline-none group focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 rounded-md px-2"
+            className="flex justify-between items-center w-full py-4 text-left focus:outline-none group focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2 rounded-md px-2"
             onClick={() => toggleItem(index)}
             onKeyDown={(e) => handleKeyDown(e, index)}
             aria-expanded={openIndex === index}
@@ -56,10 +56,10 @@ const AccordionFAQ = ({ items }: AccordionFAQProps) => {
             id={`faq-question-${index}`}
             data-faq-button={index}
           >
-            <h3 className="text-lg font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-200">
+            <h3 className="text-lg font-semibold text-gray-800 group-hover:text-yellow-600 transition-colors duration-200">
               {item.question}
             </h3>
-            <div className={`flex items-center justify-center h-6 w-6 rounded-full bg-gray-200 text-gray-600 transition-all duration-300 ${openIndex === index ? 'transform rotate-180 bg-blue-500 text-white' : ''}`}>
+            <div className={`flex items-center justify-center h-6 w-6 rounded-full bg-gray-200 text-gray-600 transition-all duration-300 ${openIndex === index ? 'transform rotate-180 bg-yellow-500 text-white' : ''}`}>
               <svg 
                 className="h-4 w-4"
                 fill="none" 
@@ -81,7 +81,7 @@ const AccordionFAQ = ({ items }: AccordionFAQProps) => {
               openIndex === index ? 'opacity-100 max-h-[1000px]' : 'opacity-0 max-h-0'
             }`}
           >
-            <div className="py-2 px-2 text-gray-600 border-l-4 border-blue-500 bg-blue-50 my-2 rounded-r-md">
+            <div className="py-2 px-2 text-gray-600 border-l-4 border-yellow-500 bg-yellow-50 my-2 rounded-r-md">
               {item.answer}
             </div>
           </div>

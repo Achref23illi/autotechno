@@ -26,7 +26,7 @@ export default function DashboardPage() {
             <div className="flex items-center gap-2">
               <span className="text-gray-700 font-medium whitespace-nowrap">Filter by:</span>
               <div className="relative inline-block">
-                <select className="pl-4 pr-10 py-2.5 border border-gray-300 rounded-md bg-white appearance-none shadow-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 cursor-pointer">
+                <select className="pl-4 pr-10 py-2.5 border border-gray-300 rounded-md bg-white appearance-none shadow-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 cursor-pointer">
                   <option value="">All Brands</option>
                   <option value="bmw">BMW</option>
                   <option value="mercedes">Mercedes-Benz</option>
@@ -47,7 +47,7 @@ export default function DashboardPage() {
             <div className="flex items-center gap-2">
               <span className="text-gray-700 font-medium">Type:</span>
               <div className="relative inline-block">
-                <select className="pl-4 pr-10 py-2.5 border border-gray-300 rounded-md bg-white appearance-none shadow-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 cursor-pointer">
+                <select className="pl-4 pr-10 py-2.5 border border-gray-300 rounded-md bg-white appearance-none shadow-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 cursor-pointer">
                   <option value="">All Types</option>
                   <option value="lcd">LCD Repair</option>
                   <option value="speedo">Speedometer</option>
@@ -62,7 +62,7 @@ export default function DashboardPage() {
               </div>
             </div>
             
-            <button className="bg-blue-600 hover:bg-blue-700 text-white py-2.5 px-4 rounded-md transition-colors duration-200 flex items-center gap-2 shadow-sm">
+            <button className="bg-yellow-600 hover:bg-yellow-700 text-white py-2.5 px-4 rounded-md transition-colors duration-200 flex items-center gap-2 shadow-sm">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
               </svg>
@@ -120,7 +120,7 @@ export default function DashboardPage() {
               </Button>
             </div>
             <div className="md:w-1/2 relative h-64 md:h-auto">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 opacity-80 z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-800 opacity-80 z-10"></div>
               <Image
                 src="/images/dashboard-hero.png"
                 alt="Digital dashboard solutions"
@@ -161,7 +161,7 @@ export default function DashboardPage() {
                 Solutions to fix faulty digital speedometers and instrument clusters.
               </p>
               <div className="flex justify-between items-center">
-                <span className="text-blue-600 font-semibold">€49.99</span>
+                <span className="text-yellow-600 font-semibold">€49.99</span>
                 <Button variant="primary" size="sm" href="/dashboard/speedometer-repair">
                   View Details
                 </Button>
@@ -185,7 +185,7 @@ export default function DashboardPage() {
                 Fix missing pixels, dim displays, and other LCD panel issues in dashboards.
               </p>
               <div className="flex justify-between items-center">
-                <span className="text-blue-600 font-semibold">€59.99</span>
+                <span className="text-yellow-600 font-semibold">€59.99</span>
                 <Button variant="primary" size="sm" href="/dashboard/lcd-repair">
                   View Details
                 </Button>
@@ -209,7 +209,7 @@ export default function DashboardPage() {
                 Specialized files for installing and calibrating custom gauges and displays.
               </p>
               <div className="flex justify-between items-center">
-                <span className="text-blue-600 font-semibold">€79.99</span>
+                <span className="text-yellow-600 font-semibold">€79.99</span>
                 <Button variant="primary" size="sm" href="/dashboard/custom-gauges">
                   View Details
                 </Button>
@@ -222,7 +222,7 @@ export default function DashboardPage() {
       {/* Compatible Vehicles Section */}
       <section className="container mx-auto px-4 py-12 mb-8">
         <h2 className="text-2xl font-semibold mb-6 text-gray-800 text-center">
-          <span className="inline-block border-b-2 border-blue-500 pb-2">Compatible Vehicle Brands</span>
+          <span className="inline-block border-b-2 border-yellow-500 pb-2">Compatible Vehicle Brands</span>
         </h2>
         
         <div className="bg-white rounded-lg shadow-lg p-8">
@@ -248,25 +248,25 @@ export default function DashboardPage() {
               <div className="p-5">
                 <ul className="text-gray-700 space-y-2 divide-y divide-gray-100">
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>3 Series <span className="text-gray-500 text-sm">(E90, E92, F30, G20)</span></span>
                   </li>
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>5 Series <span className="text-gray-500 text-sm">(E60, F10, G30)</span></span>
                   </li>
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>7 Series <span className="text-gray-500 text-sm">(E65, F01, G11)</span></span>
                   </li>
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>X Series <span className="text-gray-500 text-sm">(X1, X3, X5, X6)</span></span>
@@ -298,25 +298,25 @@ export default function DashboardPage() {
               <div className="p-5">
                 <ul className="text-gray-700 space-y-2 divide-y divide-gray-100">
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>C-Class <span className="text-gray-500 text-sm">(W203, W204, W205)</span></span>
                   </li>
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>E-Class <span className="text-gray-500 text-sm">(W211, W212, W213)</span></span>
                   </li>
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>S-Class <span className="text-gray-500 text-sm">(W221, W222)</span></span>
                   </li>
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>SUV Models <span className="text-gray-500 text-sm">(ML, GL, GLE, GLC)</span></span>
@@ -346,25 +346,25 @@ export default function DashboardPage() {
               <div className="p-5">
                 <ul className="text-gray-700 space-y-2 divide-y divide-gray-100">
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>A Series <span className="text-gray-500 text-sm">(A3, A4, A5, A6)</span></span>
                   </li>
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>Q Series <span className="text-gray-500 text-sm">(Q3, Q5, Q7)</span></span>
                   </li>
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>TT Models</span>
                   </li>
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>R8</span>
@@ -382,7 +382,7 @@ export default function DashboardPage() {
             <div className="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
               <div className="p-4 bg-gray-50 border-b flex items-center">
                 <div className="w-14 h-14 relative mr-4 flex-shrink-0">
-                  <div className="rounded-full overflow-hidden w-full h-full flex items-center justify-center bg-blue-900">
+                  <div className="rounded-full overflow-hidden w-full h-full flex items-center justify-center bg-yellow-900">
                     <Image 
                       src="/images/brands/volkswagen.webp" 
                       alt="Volkswagen Logo" 
@@ -396,25 +396,25 @@ export default function DashboardPage() {
               <div className="p-5">
                 <ul className="text-gray-700 space-y-2 divide-y divide-gray-100">
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>Golf, Polo</span>
                   </li>
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>Passat, CC</span>
                   </li>
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>Tiguan, Touareg</span>
                   </li>
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>Jetta, Arteon</span>
@@ -444,25 +444,25 @@ export default function DashboardPage() {
               <div className="p-5">
                 <ul className="text-gray-700 space-y-2 divide-y divide-gray-100">
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>S60, S90</span>
                   </li>
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>V60, V90</span>
                   </li>
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>XC60, XC90</span>
                   </li>
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>C30, C70</span>
@@ -484,25 +484,25 @@ export default function DashboardPage() {
               <div className="p-5">
                 <ul className="text-gray-700 space-y-2 divide-y divide-gray-100">
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>Toyota, Lexus</span>
                   </li>
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>Honda, Acura</span>
                   </li>
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>Ford, Jaguar, Land Rover</span>
                   </li>
                   <li className="py-2 flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-yellow-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>Porsche, Alfa Romeo</span>
