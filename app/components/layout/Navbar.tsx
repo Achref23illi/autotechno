@@ -89,14 +89,14 @@ const Navbar = () => {
             <div className="ml-4 flex items-center">
               {user ? (
                 <div className="flex items-center space-x-4">
-                  <Link 
-                    href="/dashboard" 
+                  <Link
+                    href="/admin"
                     className="text-gray-300 hover:text-white text-sm font-medium"
                   >
-                    Dashboard
+                    Admin Dashboard
                   </Link>
                   <div className="h-4 border-l border-gray-600"></div>
-                  <button 
+                  <button
                     onClick={handleLogout}
                     className="text-gray-300 hover:text-white text-sm font-medium"
                   >
@@ -104,12 +104,12 @@ const Navbar = () => {
                   </button>
                 </div>
               ) : (
-                <Button 
-                  href="/auth/login" 
-                  variant="primary" 
+                <Button
+                  href="/admin/login"
+                  variant="primary"
                   size="sm"
                 >
-                  Login / Sign Up
+                  Admin Login
                 </Button>
               )}
             </div>
@@ -118,11 +118,11 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
             {user && (
-              <Link 
-                href="/dashboard" 
+              <Link
+                href="/admin"
                 className="mr-4 text-gray-300 hover:text-white text-sm font-medium"
               >
-                Dashboard
+                Admin
               </Link>
             )}
             <button
@@ -178,11 +178,11 @@ const Navbar = () => {
             {/* Auth Button - Mobile */}
             {!user ? (
               <Link
-                href="/auth/login"
+                href="/admin/login"
                 className="block px-4 py-3 mt-2 text-sm font-medium bg-yellow-600 text-white hover:bg-yellow-700"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Login / Sign Up
+                Admin Login
               </Link>
             ) : (
               <button

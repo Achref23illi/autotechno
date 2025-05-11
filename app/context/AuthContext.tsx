@@ -16,7 +16,6 @@ interface AuthContextType {
   loading: boolean;
   error: string | null;
   login: (email: string, password: string) => Promise<void>;
-  register: (name: string, email: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
 }
 
@@ -26,7 +25,6 @@ const AuthContext = createContext<AuthContextType>({
   loading: false,
   error: null,
   login: async () => {},
-  register: async () => {},
   logout: async () => {},
 });
 
@@ -99,44 +97,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     }
   };
 
-  // Register function
-  const register = async (name: string, email: string, password: string) => {
-    try {
-      setLoading(true);
-      setError(null);
-      
-      // In a real app, you would call your API to register the user
-      const response = await fetch('/api/auth/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, email, password }),
-      });
-      
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Registration failed');
-      }
-      
-      const userData = await response.json();
-      
-      // Store user data in localStorage for persistence
-      localStorage.setItem('autotechno_user', JSON.stringify(userData.user));
-      
-      // Update state
-      setUser(userData.user);
-    } catch (err) {
-      if (err instanceof Error) {
-        setError(err.message);
-      } else {
-        setError('An unknown error occurred during registration');
-      }
-      throw err;
-    } finally {
-      setLoading(false);
-    }
-  };
+  // Admin-only login system - register function removed
 
   // Logout function
   const logout = async () => {
@@ -162,7 +123,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     loading,
     error,
     login,
-    register,
     logout,
   };
 

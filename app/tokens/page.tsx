@@ -2,7 +2,6 @@
 'use client';
 
 import { useState } from 'react';
-//import { useAuth } from '../context/AuthContext';
 import { tokenPackages } from '../data/tokens';
 import TokenPackageCard from '../components/tokens/TokenPackageCard';
 import TokenBalanceCard from '../components/tokens/TokenBalanceCard';
@@ -12,12 +11,12 @@ import AnimatedFAQ from '../components/tokens/AnimatedFAQ';
 import { motion } from 'framer-motion';
 
 export default function TokensPage() {
-  //const { user } = useAuth();
   
   // Dummy token balance for demo - this would come from an API in a real app
   const [tokenBalance, setTokenBalance] = useState(5);
-  
+
   const [selectedPackageId, setSelectedPackageId] = useState<string>('');
+  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState<string>('credit_card');
   const [isProcessingPayment, setIsProcessingPayment] = useState(false);
   const [isPaymentComplete, setIsPaymentComplete] = useState(false);
   
@@ -31,7 +30,7 @@ export default function TokensPage() {
   };
 
   const handlePurchaseTokens = async () => {
-    if (!selectedPackageId || !setSelectedPaymentMethod) return;
+    if (!selectedPackageId) return;
 
     setIsProcessingPayment(true);
     
@@ -39,6 +38,9 @@ export default function TokensPage() {
     await new Promise(resolve => setTimeout(resolve, 1500));
     
     // In a real app, this would be an API call to process the payment
+    // Using selectedPaymentMethod to determine the payment processor
+    console.log(`Processing payment with: ${selectedPaymentMethod}`);
+    
     const selectedPackage = tokenPackages.find(pkg => pkg.id === selectedPackageId);
     
     if (selectedPackage) {
@@ -86,7 +88,7 @@ export default function TokensPage() {
             ECU File Decryption & Tokens
           </motion.h1>
           <motion.p
-            className="text-lg text-gray-800 max-w-3xl mx-auto"
+            className="text-lg text-white max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.4 }}
@@ -295,6 +297,3 @@ export default function TokensPage() {
   );
 }
 
-function setSelectedPaymentMethod(methodId: string) {
-  setSelectedPaymentMethod(methodId);
-}
