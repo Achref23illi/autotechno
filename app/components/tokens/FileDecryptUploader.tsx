@@ -104,6 +104,7 @@ const FileDecryptUploader = ({
               </div>
               <button
                 type="button"
+                title="Remove File"
                 onClick={() => setFile(null)}
                 className="ml-auto text-gray-700 hover:text-red-600"
               >
