@@ -512,7 +512,7 @@ export default function FunctionalitiesPage() {
           <h3 className="text-lg leading-6 font-medium text-gray-900">Need a new functionality?</h3>
           <div className="mt-2 max-w-xl text-sm text-gray-500">
             <p>
-              Can't find what you're looking for? Submit a request for a new functionality or feature.
+              Can&apos;t find what you&apos;re looking for? Submit a request for a new functionality or feature.
             </p>
           </div>
           <div className="mt-5">

@@ -171,6 +171,7 @@ export default function CustomersPage() {
                     className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-yellow-600 focus:ring-yellow-500"
                     onChange={handleSelectAll}
                     checked={selectedCustomers.length === sortedCustomers.length && sortedCustomers.length > 0}
+                    aria-label="Select all customers"
                   />
                 </th>
                 <th 

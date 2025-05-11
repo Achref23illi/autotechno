@@ -4,7 +4,7 @@
 import { ReactNode, useState, useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import Image from 'next/image';
+//import Image from 'next/image';
 import { useAuth } from '../../context/AuthContext';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -449,6 +449,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                     <button
                       className="absolute inset-y-0 right-0 flex items-center pr-3"
                       onClick={() => setSearchTerm('')}
+                      aria-label="Clear search"
                     >
                       <svg className="h-4 w-4 text-gray-400 hover:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />

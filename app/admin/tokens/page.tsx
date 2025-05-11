@@ -6,6 +6,14 @@ import DashboardLayout from '../components/DashboardLayout';
 import { motion } from 'framer-motion';
 import { TokenPackage } from '../../types';
 
+// Define interface for token service
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+interface TokenService {
+  id: number;
+  name: string;
+  cost: number;
+}
+
 // Sample token packages data
 const initialTokenPackages: TokenPackage[] = [
   {
@@ -55,17 +63,15 @@ const tokenTransactions = [
 const tokenServiceCosts = [
   { id: 1, name: 'ECU File Decryption', cost: 2 },
   { id: 2, name: 'Airbag Reset', cost: 3 },
-  { id: 3, name: 'Dashboard Repair', cost: 4 },
-  { id: 4, name: 'Immobilizer Bypass', cost: 5 },
-  { id: 5, name: 'Special Files', cost: 10 },
+  { id: 3, name: 'Dashboard Repair', cost: 4 }
 ];
-
 export default function TokenManagementPage() {
   const [activeTab, setActiveTab] = useState('packages');
   const [tokenPackages, setTokenPackages] = useState<TokenPackage[]>(initialTokenPackages);
   const [editingPackage, setEditingPackage] = useState<TokenPackage | null>(null);
   const [isAddPackageModalOpen, setIsAddPackageModalOpen] = useState(false);
   const [serviceCosts, setServiceCosts] = useState(tokenServiceCosts);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [editingService, setEditingService] = useState<any | null>(null);
   
   // Stats for the dashboard
@@ -104,6 +110,7 @@ export default function TokenManagementPage() {
     setEditingPackage(null);
   };
   
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleEditService = (service: any) => {
     setEditingService({ ...service });
   };

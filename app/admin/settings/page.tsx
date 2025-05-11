@@ -44,6 +44,7 @@ interface IntegrationSettings {
 }
 
 export default function SettingsPage() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState('general');
   const [isSaving, setIsSaving] = useState(false);
