@@ -2,7 +2,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useAuth } from '../context/AuthContext';
+//import { useAuth } from '../context/AuthContext';
 import { tokenPackages } from '../data/tokens';
 import TokenPackageCard from '../components/tokens/TokenPackageCard';
 import TokenBalanceCard from '../components/tokens/TokenBalanceCard';
@@ -12,13 +12,12 @@ import AnimatedFAQ from '../components/tokens/AnimatedFAQ';
 import { motion } from 'framer-motion';
 
 export default function TokensPage() {
-  const { user } = useAuth();
+  //const { user } = useAuth();
   
   // Dummy token balance for demo - this would come from an API in a real app
   const [tokenBalance, setTokenBalance] = useState(5);
   
   const [selectedPackageId, setSelectedPackageId] = useState<string>('');
-  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState<string>('credit_card');
   const [isProcessingPayment, setIsProcessingPayment] = useState(false);
   const [isPaymentComplete, setIsPaymentComplete] = useState(false);
   
@@ -32,8 +31,8 @@ export default function TokensPage() {
   };
 
   const handlePurchaseTokens = async () => {
-    if (!selectedPackageId) return;
-    
+    if (!selectedPackageId || !setSelectedPaymentMethod) return;
+
     setIsProcessingPayment(true);
     
     // Simulate processing time
@@ -246,9 +245,9 @@ export default function TokensPage() {
                   )}
                 </>
               )}
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
         
         {/* FAQ Section */}
         <div className="max-w-4xl mx-auto">
@@ -294,4 +293,8 @@ export default function TokensPage() {
       </div>
     </div>
   );
+}
+
+function setSelectedPaymentMethod(methodId: string) {
+  setSelectedPaymentMethod(methodId);
 }
