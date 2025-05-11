@@ -51,7 +51,7 @@ const TokenPackageCard: FC<TokenPackageCardProps> = ({
             <span className="text-gray-600 line-through ml-2 text-lg">${originalPrice}</span>
           )}
         </div>
-        {discountPercentage > 0 && (
+        {(discountPercentage ?? 0) > 0 && (
           <span className="bg-yellow-100 text-yellow-800 text-sm px-3 py-1 rounded-full font-bold border border-yellow-200">
             Save {discountPercentage}%
           </span>
@@ -60,7 +60,7 @@ const TokenPackageCard: FC<TokenPackageCardProps> = ({
 
       <div className="border-t-2 border-b-2 border-yellow-200 py-4 my-4">
         <div className="flex justify-center items-center text-xl font-bold">
-          <span className="text-yellow-600 mr-2">
+          <span className="text-yellow-700 mr-2">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.736 6.979C9.208 6.193 9.696 6 10 6c.304 0 .792.193 1.264.979a1 1 0 001.715-1.029C12.279 4.784 11.232 4 10 4s-2.279.784-2.979 1.95a1 1 0 001.715 1.029zM6 10a2 2 0 114 0 2 2 0 01-4 0zm8 0a2 2 0 114 0 2 2 0 01-4 0z" clipRule="evenodd" />
             </svg>

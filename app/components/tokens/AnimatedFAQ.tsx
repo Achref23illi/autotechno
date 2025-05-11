@@ -72,6 +72,7 @@ const AnimatedFAQ: React.FC<AnimatedFAQProps> = ({ items, className = '' }) => {
                 animate={{ height: 'auto', opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
+                key={`faq-answer-${index}`}
               >
                 <div className="px-6 pb-6 pt-1 border-t border-yellow-100">
                   <motion.p 
